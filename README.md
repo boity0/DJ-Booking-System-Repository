@@ -8,3 +8,5 @@ Timeslot-Alvaro
 SONG- Indiphile
 DAY- Leslie
 GIG- Boitumelo
+
+![UML Class Diagram](C:\Users\User\Documents\it\IT\y3\Tasks\ADP\UML_Class_Diagram.png)
