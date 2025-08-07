@@ -9,9 +9,13 @@ import za.ac.cput.domain.Song;
 public class SongFactoryTest {
     public static void main(String[] args) {
 
-        Song song = SongFactory.createSong(1, "Imagine", 183, "Rock", "2018");
 
 
-        Helper.printSongDetails(song);
+//        Song song = SongFactory.createSong(1, "Imagine", 183, "Rock", "2018");
+//
+//
+////        Helper.printSongDetails(song);
+
+
     }
 }

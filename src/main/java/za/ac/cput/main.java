@@ -1,5 +1,3 @@
-import za.ac.cput.domain.Timeslot;
-
 //import static jdk.internal.classfile.Classfile.build;
 
     public static void main(String[] args) {
@@ -14,4 +12,5 @@ import za.ac.cput.domain.Timeslot;
 //    }
 // This is the main class for the Rands Cape Town Database Application
 
+        /// whoever created this file, please take note of it being commented out and the jdk being confused
     }

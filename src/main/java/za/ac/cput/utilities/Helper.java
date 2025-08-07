@@ -57,14 +57,14 @@ public class Helper {
 /// the other helpers and check the first line of the class to see how they are structured.
 
 
-    public static printSongDetails(@org.jetbrains.annotations.NotNull Song song) {
-        System.out.println("Song Details:");
-        System.out.println("ID: " + song.getSongID());
-        System.out.println("Title: " + song.getSongTitle());
-        System.out.println("Duration: " + song.getSongDuration() + " seconds");
-        System.out.println("Genre: " + song.getSongGenre());
-        System.out.println("Year: " + song.getSongYear());
-    }
+//    //public static printSongDetails(@org.jetbrains.annotations.NotNull Song song) {
+//        System.out.println("Song Details:");
+//        System.out.println("ID: " + song.getSongID());
+//        System.out.println("Title: " + song.getSongTitle());
+//        System.out.println("Duration: " + song.getSongDuration() + " seconds");
+//        System.out.println("Genre: " + song.getSongGenre());
+//        System.out.println("Year: " + song.getSongYear());
+//    }
 
 
 
@@ -78,7 +78,7 @@ public class Helper {
 
 //DJ Validation methods-Maphelo
 
-///check your camelCasing in all your entites
+///check your camelCasing in all your entities
 
 
    //Change djId datatype on the UML Class Diagram to String.
