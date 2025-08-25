@@ -1,74 +1,37 @@
 package za.ac.cput.domain;
+import jakarta.persistence.*;
 
-import java.util.Objects;
-
+@Entity
 public class Gig {
-    private int gigId;
-    private double gigSalary;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long gigId;
+
+    private double gigFee;
     private String gigVenue;
+    private String timeslot;
+    private String dayOfWeek;
 
-    private Gig(Builder builder) {
-        this.gigId = builder.gigId;
-        this.gigSalary = builder.gigSalary;
-        this.gigVenue = builder.gigVenue;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "dj_id", nullable = false)
+    private DJ dj;
+
+    protected Gig() {}
+
+    public Gig(Long gigId, double gigFee, String gigVenue, String timeslot, String dayOfWeek, DJ dj) {
+        this.gigId = gigId;
+        this.gigFee = gigFee;
+        this.gigVenue = gigVenue;
+        this.timeslot = timeslot;
+        this.dayOfWeek = dayOfWeek;
+        this.dj = dj;
     }
 
-    public int getGigId() {
-        return gigId;
-    }
-
-    public double getGigSalary() {
-        return gigSalary;
-    }
-
-    public String getGigVenue() {
-        return gigVenue;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Gig gig = (Gig) o;
-        return gigId == gig.gigId;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(gigId);
-    }
-
-    @Override
-    public String toString() {
-        return "Gig{" +
-                "gigId=" + gigId +
-                ", gigSalary=" + gigSalary +
-                ", gigVenue='" + gigVenue + '\'' +
-                '}';
-    }
-
-    public static class Builder {
-        private int gigId;
-        private double gigSalary;
-        private String gigVenue;
-
-        public Builder setGigId(int gigId) {
-            this.gigId = gigId;
-            return this;
-        }
-
-        public Builder setGigSalary(double gigSalary) {
-            this.gigSalary = gigSalary;
-            return this;
-        }
-
-        public Builder setGigVenue(String gigVenue) {
-            this.gigVenue = gigVenue;
-            return this;
-        }
-
-        public Gig build() {
-            return new Gig(this);
-        }
-    }
+    public Long getGigId() { return gigId; }
+    public double getGigFee() { return gigFee; }
+    public String getGigVenue() { return gigVenue; }
+    public String getTimeslot() { return timeslot; }
+    public String getDayOfWeek() { return dayOfWeek; }
+    public DJ getDj() { return dj; }
 }
